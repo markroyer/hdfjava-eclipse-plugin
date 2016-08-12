@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="ncsa.hdf.hdfjava.feature" version="0.0.0">
+      <category name="ncsa.hdf.hdfjava"/>
+   </feature>
+   <feature id="ncsa.hdf.hdfjava.feature.source" version="0.0.0">
+      <category name="ncsa.hdf.hdfjava.source"/>
+   </feature>
+   <category-def name="ncsa.hdf.hdfjava" label="HDF Java">
+      <description>
+         HDF binary files.
+      </description>
+   </category-def>
+   <category-def name="ncsa.hdf.hdfjava.source" label="HDF Java (Sources)">
+      <description>
+         HDF source files.
+      </description>
+   </category-def>
+</site>

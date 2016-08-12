@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="ncsa.hdf.hdfjava.feature"
+      label="HDF Java"
+      version="2.11.0.qualifier">
+
+   <description url="https://www.hdfgroup.org/products/java/">
+      The HDF Java Products consist of HDFView (a Java browser for HDF4 and HDF5 files) and the HDF-Java wrappers.
+
+The HDF-Java wrappers consist of the Java HDF Object Package, related HDF4 and HDF5 Object Packages, and the native interface for Java HDF (JHI) and Java HDF5 (JHI5). The native interface includes the Java classes and C interface libraries.
+   </description>
+
+   <copyright url="https://www.hdfgroup.org/products/licenses.html">
+      Copyright 1998-2009 University Corporation for Atmospheric Research/Unidata
+Portions of this software were developed by the Unidata Program
+at the
+University Corporation for Atmospheric Research.
+Access and use of this software shall impose the following obligations
+and understandings on the user. The user is granted the right,
+without
+any fee or cost, to use, copy, modify, alter, enhance and distribute
+this software, and any derivative works thereof, and its supporting
+documentation for any purpose whatsoever, provided that this
+entire
+notice appears in all copies of the software, derivative works
+and
+supporting documentation.  Further, UCAR requests that the user
+credit
+UCAR/Unidata in any publications that result from the use of
+this
+software or in any product that includes this software. The names
+UCAR
+and/or Unidata, however, may not be used in any advertising or
+publicity
+to endorse or promote any products or commercial entity unless
+specific
+written permission is obtained from UCAR/Unidata. The user also
+understands that UCAR/Unidata is not obligated to provide the
+user with
+any support, consulting, training or assistance of any kind with
+regard
+to the use, operation and performance of this software nor to
+provide
+the user with any updates, revisions, new versions or &quot;bug fixes.&quot;
+THIS SOFTWARE IS PROVIDED BY UCAR/UNIDATA &quot;AS IS&quot; AND ANY EXPRESS
+OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE
+DISCLAIMED. IN NO EVENT SHALL UCAR/UNIDATA BE LIABLE FOR ANY
+SPECIAL,
+INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+WITH THE ACCESS, USE OR PERFORMANCE OF THIS SOFTWARE.
+   </copyright>
+
+   <license url="https://www.hdfgroup.org/products/licenses.html">
+      Copyright 1998-2009 University Corporation for Atmospheric Research/Unidata
+
+Portions of this software were developed by the Unidata Program at the
+University Corporation for Atmospheric Research.
+
+Access and use of this software shall impose the following obligations
+and understandings on the user. The user is granted the right, without
+any fee or cost, to use, copy, modify, alter, enhance and distribute
+this software, and any derivative works thereof, and its supporting
+documentation for any purpose whatsoever, provided that this entire
+notice appears in all copies of the software, derivative works and
+supporting documentation.  Further, UCAR requests that the user credit
+UCAR/Unidata in any publications that result from the use of this
+software or in any product that includes this software. The names UCAR
+and/or Unidata, however, may not be used in any advertising or publicity
+to endorse or promote any products or commercial entity unless specific
+written permission is obtained from UCAR/Unidata. The user also
+understands that UCAR/Unidata is not obligated to provide the user with
+any support, consulting, training or assistance of any kind with regard
+to the use, operation and performance of this software nor to provide
+the user with any updates, revisions, new versions or &quot;bug fixes.&quot;
+
+THIS SOFTWARE IS PROVIDED BY UCAR/UNIDATA &quot;AS IS&quot; AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL UCAR/UNIDATA BE LIABLE FOR ANY SPECIAL,
+INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
+WITH THE ACCESS, USE OR PERFORMANCE OF THIS SOFTWARE.
+   </license>
+
+   <plugin
+         id="ncsa.hdf.hdfjava"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ncsa.hdf.hdfjava-linux-amd64"
+         os="linux"
+         ws="gtk"
+         arch="x86_64"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ncsa.hdf.hdfjava-macosx"
+         os="macosx"
+         ws="cocoa"
+         arch="x86_64"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="ncsa.hdf.hdfjava-win32-amd64"
+         os="win32"
+         ws="win32"
+         arch="x86_64"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hdfjava-win32-amd64
+Bundle-SymbolicName: ncsa.hdf.hdfjava-win32-amd64
+Bundle-Vendor: The HDF Group
+Bundle-Version: 2.11.0.qualifier
+Fragment-Host: ncsa.hdf.hdfjava;bundle-version="2.11.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64))

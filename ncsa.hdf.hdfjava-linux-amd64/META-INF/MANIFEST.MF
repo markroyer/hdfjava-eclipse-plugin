@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hdfjava-linux-amd64
+Bundle-SymbolicName: ncsa.hdf.hdfjava-linux-amd64
+Bundle-Vendor: The HDF Group
+Fragment-Host: ncsa.hdf.hdfjava;bundle-version="2.11.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64))
+Bundle-Version: 2.11.0.qualifier

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<relativePath>../ncsa.hdf.hdfjava.parent</relativePath>
+		<groupId>ncsa.hdf.hdfjava</groupId>
+		<artifactId>ncsa.hdf.hdfjava.parent</artifactId>
+		<version>2.11.0-SNAPSHOT</version>
+	</parent>
+
+	<packaging>eclipse-repository</packaging>
+	
+	<properties>
+		<p2.repository.dest>${project.basedir}/../target/repository</p2.repository.dest>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>${maven-antrun-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>copy-to-root-target</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<echo message="" />
+								<echo message="Repository path: ${project.build.directory}/repository" />
+								<echo message="Built version: ${unqualifiedVersion}.${buildQualifier}" />
+								<echo message="" />
+
+								<delete includeemptydirs="false" failonerror="false">
+									<fileset
+										dir="${p2.repository.dest}">
+										<include name="**" />
+									</fileset>
+								</delete>
+								<copy includeemptydirs="false"
+									todir="${p2.repository.dest}">
+									<fileset dir="target/repository">
+										<include name="**" />
+									</fileset>
+								</copy>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-eclipserun-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+				    <!-- IMPORTANT: DO NOT split the arg line -->
+					<appArgLine>-application org.eclipse.ant.core.antRunner -buildfile packaging-p2composite.ant p2.composite.add -Dsite.label="${project.name} P2 Site" -Dproject.build.directory=${project.build.directory} -DunqualifiedVersion=${unqualifiedVersion} -DbuildQualifier=${buildQualifier} -Dproject.name=${project.name}</appArgLine>
+					<repositories>
+						<repository>
+							<id>mars</id>
+							<layout>p2</layout>
+							<url>http://download.eclipse.org/releases/mars</url>
+						</repository>
+					</repositories>
+					<dependencies>
+						<dependency>
+							<artifactId>org.eclipse.ant.core</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+						<dependency>
+							<artifactId>org.apache.ant</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+						<dependency>
+							<artifactId>org.eclipse.equinox.p2.repository.tools</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+						<dependency>
+                            <artifactId>org.eclipse.equinox.p2.core.feature</artifactId>
+                            <type>eclipse-feature</type>
+                        </dependency>
+                        <dependency>
+                            <artifactId>org.eclipse.equinox.p2.extras.feature</artifactId>
+                            <type>eclipse-feature</type>
+                        </dependency>
+                        <dependency>
+                            <artifactId>org.eclipse.equinox.ds</artifactId>
+                            <type>eclipse-plugin</type>
+                        </dependency>
+					</dependencies>
+				</configuration>
+				<executions>
+					<execution>
+						<id>add-p2-composite-repository</id>
+						<phase>package</phase>
+						<goals>
+							<goal>eclipse-run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>release-composite</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			
+			<properties>
+				<!-- remote rsync host -->
+				<rsync.remote.dir>FIXME/public_html/p2.repositories/updates/${project.name}/</rsync.remote.dir> 
+				<!-- local source directory for rsync (read from this directory) -->
+				<rsync.local.dir>${user.home}/p2.repositories/updates/${project.name}/updates/</rsync.local.dir>
+				<!-- pass "-n" to perform a trial run with no changes made -->
+				<dryrun></dryrun>
+			</properties>
+			
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>${maven-antrun-plugin.version}</version>
+						<executions>
+							<execution>
+								<id>update-local-repository</id>
+								<phase>prepare-package</phase>
+								<configuration>
+									<target>
+										<ant antfile="${basedir}/rsync.ant" target="rsync-update">
+										</ant>
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+							
+							<execution>
+								<id>deploy-repository</id>
+								<phase>verify</phase>
+								<configuration>
+									<target>
+										<ant antfile="${basedir}/rsync.ant" target="rsync-commit">
+										</ant>
+									</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<artifactId>ncsa.hdf.hdfjava.repository</artifactId>
+	<groupId>ncsa.hdf.hdfjava.repository</groupId>
+</project>
