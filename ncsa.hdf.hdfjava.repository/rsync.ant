@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Rsync from Ant" basedir=".">
 
+	<!-- From  http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/ -->
+
 	<!-- remote rsync host -->
 	<!-- The properties rsync.remote.dir and rsync.local.dir are
 	specified in the ./pom.xml -->

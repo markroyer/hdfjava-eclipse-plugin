@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <project name="project">
 
+	<!-- From  http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/ -->
+	
     <target name="getMajorMinorVersion">
         <script language="javascript">
             <![CDATA[
