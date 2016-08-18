@@ -33,8 +33,7 @@ $(HOME)/p2.repositories/updates
 
 To publish the project to a public site, type
 
-```
-bash
+```bash
 mvn clean verify -Prelease-composite
 ```
 
