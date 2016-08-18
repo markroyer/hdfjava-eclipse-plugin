@@ -21,15 +21,22 @@ software sites in eclipse.
 The project can be built most easily using maven from the
 `ncsa.hdf.hdfjava.parent` directory. Typing
 
-```bash mvn clean verify ```
+```bash
+mvn clean verify
+```
 
 will build the project and place the built project in
 
-```bash $(HOME)/p2.repositories/updates ```
+```bash
+$(HOME)/p2.repositories/updates
+```
 
 To publish the project to a public site, type
 
-```bash mvn clean verify -Prelease-composite ```
+```
+bash
+mvn clean verify -Prelease-composite
+```
 
 By default the public site is `ncsa.hdf.hdfjava.parent.wiki`. The
 local repository and public repository locations are specified in the
