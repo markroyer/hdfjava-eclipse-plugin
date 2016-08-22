@@ -3,11 +3,6 @@
 An Eclipse plugin to provide HDF support in OSGI and Eclipse RCP
 applications.
 
-
-The ant build scripts are based on code from:
-
-http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/
-
 ## Install
 
 The most recent version of the plugin is for HDF Java 2.11.
@@ -43,10 +38,16 @@ local repository and public repository locations are specified in the
 and `rsync.remote.dir` properties.
 
 
-
 ## LICENSE
 
 See included LICENSE file.
+
+## Thanks
+
+The ant build scripts are based on code from:
+
+http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/
+
 
 <!--  LocalWords:  hdfjava HDF OSGI RCP mvn Prelease
  -->
