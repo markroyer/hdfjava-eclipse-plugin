@@ -114,15 +114,15 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			
-			<properties>
-				<!-- remote rsync host -->
+<!-- 			<properties>
+				remote rsync host
 				<rsync.remote.dir>../../hdfjava-eclipse-plugin.wiki/p2.repositories/updates/${project.name}/</rsync.remote.dir> 
-				<!-- local source directory for rsync (read from this directory) -->
+				local source directory for rsync (read from this directory)
 				<rsync.local.dir>${user.home}/p2.repositories/updates/${project.name}/updates/</rsync.local.dir>
-				<!-- pass "-n" to perform a trial run with no changes made -->
+				pass "-n" to perform a trial run with no changes made
 				<dryrun></dryrun>
 			</properties>
-			
+ -->			
 			<build>
 				<plugins>
 					<plugin>
