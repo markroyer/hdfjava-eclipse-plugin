@@ -9,7 +9,7 @@ The most recent version of the plugin is for HDF Java 2.11.
 
 To install the plugin, add the following URL to the list of available
 software sites in eclipse.
-[https://raw.githubusercontent.com/wiki/markroyer/hdfjava-eclipse-plugin/p2.repositories/updates/ncsa.hdf.hdfjava.repository](https://raw.githubusercontent.com/wiki/markroyer/hdfjava-eclipse-plugin/p2.repositories/updates/ncsa.hdf.hdfjava.repository)
+[https://cdn.rawgit.com/markroyer/p2-repositories/master](https://cdn.rawgit.com/markroyer/p2-repositories/master)
 
 ## Building
 
@@ -23,20 +23,10 @@ mvn clean verify
 will build the project and place the built project in
 
 ```bash
-$(HOME)/p2.repositories/updates
+../../p2.repositories/
 ```
 
-To publish the project to a public site, type
-
-```bash
-mvn clean verify -Prelease-composite
-```
-
-By default the public site is `ncsa.hdf.hdfjava.parent.wiki`. The
-local repository and public repository locations are specified in the
-`ncsa.hdf.hdfjava.repository/pom.xml` file using the `rsync.local.dir`
-and `rsync.remote.dir` properties.
-
+You can check out all the p2 repository projects at [https://github.com/markroyer/p2-repositories](https://github.com/markroyer/p2-repositories)
 
 ## LICENSE
 
