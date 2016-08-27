@@ -29,7 +29,7 @@
     <target name="compute.child.repository.data" depends="getMajorMinorVersion">
         <property name="full.version" value="${unqualifiedVersion}.${buildQualifier}" />
 
-        <property name="software.download.area" location="../../p2-repositories/${project.name}" />
+        <property name="software.download.area" location="../../hdfjava-eclipse-plugin.wiki/${project.name}" />
         <property name="updates.dir" value="updates" />
 
         <property name="site.composite.name" value="${site.label} ${majorMinorVersion}" />
