@@ -26,7 +26,13 @@ will build the project and place the built project in
 ../../p2.repositories/
 ```
 
-You can check out all the p2 repository projects at [https://github.com/markroyer/p2-repositories](https://github.com/markroyer/p2-repositories)
+You can check out all the p2 repository projects by adding the URL
+
+```
+https://cdn.rawgit.com/markroyer/p2-repositories/master
+```
+
+to your Eclipse repository locations.
 
 ## LICENSE
 
