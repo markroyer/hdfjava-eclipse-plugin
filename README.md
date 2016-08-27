@@ -9,7 +9,17 @@ The most recent version of the plugin is for HDF Java 2.11.
 
 To install the plugin, add the following URL to the list of available
 software sites in eclipse.
-[https://cdn.rawgit.com/markroyer/p2-repositories/master](https://cdn.rawgit.com/markroyer/p2-repositories/master)
+
+```
+https://raw.githubusercontent.com/wiki/markroyer/hdfjava-eclipse-plugin/ncsa.hdf.hdfjava.repository/updates
+```
+
+Alternitavely, you may want to add the following composite repository which contains a number of related libraries.
+
+
+```
+https://rawgit.com/markroyer/p2-repositories/master
+```
 
 ## Building
 
@@ -20,16 +30,16 @@ The project can be built most easily using maven from the
 mvn clean verify
 ```
 
-will build the project and place the built project in
+will compile the project and create a repository containing all of the related libraries in
 
 ```bash
-../../p2.repositories/
+../../hdfjava-eclipse-plugin.wiki/
 ```
 
 You can check out all the p2 repository projects by adding the URL
 
 ```
-https://cdn.rawgit.com/markroyer/p2-repositories/master
+https://rawgit.com/markroyer/p2-repositories/master
 ```
 
 to your Eclipse repository locations.
