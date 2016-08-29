@@ -14,7 +14,8 @@ software sites in eclipse.
 https://raw.githubusercontent.com/wiki/markroyer/hdfjava-eclipse-plugin/ncsa.hdf.hdfjava.repository/updates
 ```
 
-Alternitavely, you may want to add the following composite repository which contains a number of related libraries.
+Alternatively, you may want to add the following composite repository
+which contains a number of related libraries.
 
 
 ```
@@ -52,8 +53,8 @@ See included LICENSE file.
 
 The ant build scripts are based on code from:
 
-http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/
+[http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/](http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/)
 
 
-<!--  LocalWords:  hdfjava HDF OSGI RCP mvn Prelease
+<!--  LocalWords:  hdfjava HDF OSGI RCP mvn
  -->
