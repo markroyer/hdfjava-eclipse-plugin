@@ -31,19 +31,12 @@ The project can be built most easily using maven from the
 mvn clean verify
 ```
 
-will compile the project and create a repository containing all of the related libraries in
+will compile the project and create a repository containing all of the
+related libraries in
 
 ```bash
 ../../hdfjava-eclipse-plugin.wiki/
 ```
-
-You can check out all the p2 repository projects by adding the URL
-
-```
-https://rawgit.com/markroyer/p2-repositories/master
-```
-
-to your Eclipse repository locations.
 
 ## LICENSE
 
