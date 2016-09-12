@@ -1,7 +1,11 @@
 # hdfjava-eclipse-plugin
 
-**HDFJava-Eclipse-Plugin** is an Eclipse plugin that provides HDF support in OSGI and Eclipse RCP
-applications.  This makes it easy to deploy applications that use the HDFJava library to 64 bit Linux, Mac, and Windows systems.  If the developer bundles are also installed to your Eclipse IDE, then the Javadoc is added along with linked source code.
+**HDFJava-Eclipse-Plugin** is an Eclipse plugin that provides HDF
+support in OSGI and Eclipse RCP applications.  This makes it easy to
+deploy applications that use the HDFJava library to 64 bit Linux, Mac,
+and Windows systems.  If the developer bundles are also installed to
+your Eclipse IDE, then the Javadoc is added along with linked source
+code.
 
 ## Install
 
@@ -49,5 +53,5 @@ The ant build scripts are based on code from:
 [http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/](http://www.lorenzobettini.it/2015/01/creating-p2-composite-repositories-during-the-build/)
 
 
-<!--  LocalWords:  hdfjava HDF OSGI RCP mvn
+<!--  LocalWords:  hdfjava HDF OSGI RCP mvn HDFJava
  -->
