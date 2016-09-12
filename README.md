@@ -1,7 +1,7 @@
 # hdfjava-eclipse-plugin
 
-An Eclipse plugin to provide HDF support in OSGI and Eclipse RCP
-applications.
+**HDFJava-Eclipse-Plugin** is an Eclipse plugin that provides HDF support in OSGI and Eclipse RCP
+applications.  This makes it easy to deploy applications that use the HDFJava library to 64 bit Linux, Mac, and Windows systems.  If the developer bundles are also installed to your Eclipse IDE, then the Javadoc is added along with linked source code.
 
 ## Install
 
